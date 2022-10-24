@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lora", sans-serif;
+}
+button {
+  outline: 0;
+  border: 0;
+}
+.logo {
+  width: 100px;
+  height: auto;
+}
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 0;
+  z-index: 1;
+  box-shadow: 0px 1px 10px #999;
+}
+
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat scroll center scroll;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.carousel-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  opacity: 0.7;
+}
+
+.carousel-caption {
+  bottom: 180px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.carousel-caption h5 {
+  color: white;
+  font-size: 100px;
+  font-weight: 600;
+}
+
+.carousel-caption p {
+  color: white;
+  font-size: 18px;
+  top: 0;
+}
+
+section {
+  width: 100%;
+  padding: 5rem;
+}
+
+.shop_intro {
+  width: inherit;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.shop_intro .shop_intro-image {
+  width: 600px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shop_intro .shop_intro-description {
+  position: absolute;
+  width: 30%;
+  right: 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.shop_intro .shop_intro-title {
+  font-family: "Fuzzy Bubbles", cursive;
+  font-weight: 700;
+  font-size: 50px;
+  margin-bottom: 1rem;
+}
+.shop_intro .shop_intro-subtitle {
+  font-family: "Fuzzy Bubbles", cursive;
+  font-size: 22px;
+  font-size: 400;
+  margin-left: 4rem;
+  line-height: 35px;
+}
+
+#products_section {
+  background: url(/Creamycreations/images/product-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.products_container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.products_cake_cards_container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 3rem;
+}
+
+.products_cake_cards_container .cake_card {
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+  background: whitesmoke;
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.cake_card .cake_card-action {
+  position: absolute;
+  display: flex;
+  gap: 0.75rem;
+  right: 1rem;
+  top: 0;
+  visibility: hidden;
+  transition: top 0.1s ease-in;
+}
+.products_cake_cards_container .cake_card:hover .cake_card-action {
+  visibility: visible;
+  top: 1rem;
+}
+.cake_card-action .icon-container {
+  background: whitesmoke;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 50%;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  cursor: pointer;
+}
+.icon-container .heart-icon {
+  color: red;
+}
+.icon-container .share-icon {
+  color: black;
+}
+
+.cake_card .cake_card-details h4 {
+  color: whitesmoke;
+}
+.cake_card .cake_card-details p {
+  color: whitesmoke;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.cake_card .cake_card-details .cart-button {
+  padding: 0.25rem 1rem;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #ffffff;
+  border: 0 solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  display: inline-flex;
+  line-height: 24px;
+  overflow-wrap: break-word;
+  text-decoration: none;
+  width: auto;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.products_cake_cards_container .cake1 {
+  background: linear-gradient(
+      rgba(13, 13, 13, 0) 46.79%,
+      rgba(10, 10, 10, 0.7) 74.43%
+    ),
+    url(/Creamycreations/images/cake1.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.products_cake_cards_container .cake2 {
+  background: linear-gradient(
+      rgba(13, 13, 13, 0) 46.79%,
+      rgba(10, 10, 10, 0.7) 74.43%
+    ),
+    url(/Creamycreations/images/cake2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.products_cake_cards_container .cake3 {
+  background: linear-gradient(
+      rgba(13, 13, 13, 0) 46.79%,
+      rgba(10, 10, 10, 0.7) 74.43%
+    ),
+    url(/Creamycreations/images/cake3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.products_cake_cards_container .cake4 {
+  background: linear-gradient(
+      rgba(13, 13, 13, 0) 46.79%,
+      rgba(10, 10, 10, 0.7) 74.43%
+    ),
+    url(/Creamycreations/images/cake4.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.products_container .products-loadmore {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.products_container .products-loadmore .more-cake-btn {
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: #111827;
+  font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none #d1d5db solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.products_container .products-loadmore .more-cake-btn:hover {
+  background-color: rgb(249, 250, 251);
+}
+
+.products_container .products-loadmore .more-cake-btn:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.products_container .products-loadmore .more-cake-btn:focus-visible {
+  box-shadow: none;
+}
